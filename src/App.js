@@ -1,24 +1,24 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { Layout, Typography } from "antd";
+import "antd/dist/antd.css";
+
+import Main from "./components/Main";
+
+const { Header, Content, Footer } = Layout;
+const { Title } = Typography;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout justify="center" align="center">
+      <Header>
+        <Title type="danger" level={1}>
+          Tango Challenge
+        </Title>
+      </Header>
+      <Content>
+        <Main />
+      </Content>
+      <Footer>With 💛 MigueMartelo</Footer>
+    </Layout>
   );
 }
 
