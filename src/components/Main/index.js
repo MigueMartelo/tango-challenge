@@ -15,7 +15,7 @@ const Main = () => {
 
   const onChange = (date) => {
     if (date) {
-      setYear(new Date().getFullYear);
+      setYear(new Date().getFullYear());
       setMonth(date.format("MM"));
       setDay(date.format("DD"));
     }
@@ -39,7 +39,9 @@ const Main = () => {
       <Button onClick={handleClick} type="primary">
         Get the photos
       </Button>
-      {imagesName && <Carousel />}
+      {imagesName && (
+        <Carousel date={`${year}/${month}/${day}`} imagesName={imagesName} />
+      )}
     </div>
   );
 };
